@@ -1,0 +1,3 @@
+# Ignore p1mon code
+p1mon/*
+!p1mon/.gitkeep

@@ -1,0 +1,27 @@
+# P1Monitor compose-file
+
+version: "3" #Version 3 an and later
+services:
+  web:
+    container_name: p1monitor
+    image: p1monitor-docker
+    build: .
+    restart: always
+    cap_add:
+      - SYS_NICE
+    devices:
+      - /dev/ttyUSB0
+      - /dev/gpiomem
+    environment: []
+    hostname: p1mon
+    ports:
+      - "9595:80"
+      - "10721:10721"
+      - "40721:40721"
+    volumes:
+      - /opt/p1mon/data:/p1mon/data:rw
+      - /opt/p1mon/usbdisk:/p1mon/mnt/usb:rw
+    tmpfs:
+      - /tmp
+      - /run
+      - /p1mon/mnt/ramdisk
