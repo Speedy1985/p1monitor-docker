@@ -15,3 +15,8 @@ Note:  P1 Monitor image can be download from https://www.ztatz.nl/p1-monitor/
 
 ### Stop the monitor
 - docker-compose down
+
+### Install start/stop service to make sure the mointor is started after reboot
+- place the service file in /etc/systemd/system
+- run systemctl enable p1monitor
+- after this you can start/stop with sytemctl start p1monitor
