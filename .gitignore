@@ -1,3 +1,4 @@
-# Ignore p1mon code
+# Ignore p1mon code because this is not my work
+# The p1mon scripts can be extracted with the extract script.
 p1mon/*
 !p1mon/.gitkeep
