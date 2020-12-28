@@ -1,7 +1,6 @@
 ### P1Monitor - Docker version ###
-#
-# Note:  P1 Monitor can be download from https://www.ztatz.nl/p1-monitor/
-#
+
+Note:  P1 Monitor image can be download from https://www.ztatz.nl/p1-monitor/
 
 # Pre tasks before you can use the p1monitor-docker
 - Download last image from https://www.ztatz.nl/p1-monitor/
