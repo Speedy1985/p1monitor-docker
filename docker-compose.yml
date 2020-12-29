@@ -1,6 +1,6 @@
 # P1Monitor compose-file
 
-version: "3" #Version 3 an and later
+version: "3.2" #Version 3.2 an and later
 services:
   web:
     container_name: p1monitor
@@ -19,8 +19,12 @@ services:
       - "10721:10721"
       - "40721:40721"
     volumes:
-      - /opt/p1mon/data:/p1mon/data:rw
-      - /opt/p1mon/usbdisk:/p1mon/mnt/usb:rw
+      - type: bind
+        source: /opt/p1mon/data
+        target: /p1mon/data
+      - type: bind
+        source: /opt/p1mon/usbdisk
+        target: /p1mon/usb
     tmpfs:
       - /tmp
       - /run
