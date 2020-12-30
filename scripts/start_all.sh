@@ -5,7 +5,10 @@ cron
 
 echo "Fake /dev/sda1"
 touch /dev/sda1
+
 mkdir -p /var/log/p1monitor
+chmod -R 777 /p1mon/data
+chmod -R 777 /p1mon/usb
 
 rm /var/log/p1monitor/shutdown
 

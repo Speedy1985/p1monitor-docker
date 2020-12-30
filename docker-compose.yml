@@ -1,11 +1,12 @@
 # P1Monitor compose-file
 
-version: "3.2" #Version 3.2 an and later
+version: "3.2"
 services:
   web:
     container_name: p1monitor
     image: p1monitor-docker
     build: .
+    privileged: true
     restart: always
     cap_add:
       - SYS_NICE
